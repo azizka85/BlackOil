@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Images/eclipse-icon-32x32.png</file>
+        <file>Images/exit-32x32.ico</file>
+        <file>Images/icon-axes-32x32.png</file>
+        <file>Images/icon-console-32x32.png</file>
+        <file>Images/icon-fitsize-32x32.png</file>
+        <file>Images/icon-legend-32x32.png</file>
+        <file>Images/icon-linechart-32x32.png</file>
+        <file>Images/icon-mesh-32x32.png</file>
+        <file>Images/icon-schedule-32x32.png</file>
+        <file>Images/icon-slicers-32x32.png</file>
+        <file>Images/icon-tablegrid-32x32.png</file>
+        <file>Images/icon-well-32x32.png</file>
+        <file>Images/main-image-32x32.ico</file>
+        <file>Images/open-icon-32x32.png</file>
+        <file>Images/icon-waiting.gif</file>
+        <file>Images/icon-horizontal-splitter-32x32.png</file>
+        <file>Images/icon-vertical-splitter-32x32.png</file>
+        <file>Images/icon-settings-32x32.png</file>
+        <file>Shaders/field-fragment.fsh</file>
+        <file>Shaders/field-vertex.vsh</file>
+        <file>Shaders/grid-vertex.vsh</file>
+        <file>Shaders/grid-fragment.fsh</file>
+        <file>Shaders/select-vertex.vsh</file>
+        <file>Shaders/select-fragment.fsh</file>
+        <file>Shaders/axes-vertex.vsh</file>
+        <file>Shaders/axes-fragment.fsh</file>
+    </qresource>
+</RCC>

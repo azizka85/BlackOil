@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FieldSettingsForm</class>
+ <widget class="QWidget" name="FieldSettingsForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>350</width>
+    <height>1014</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="VerticalLayout">
+   <item>
+    <widget class="QScrollArea" name="ScrollArea">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="ScrollAreaContent">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>332</width>
+        <height>996</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="ScrollAreaVerticalLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QTreeWidget" name="ArrayTreeWidget">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QAbstractScrollArea::AdjustToContents</enum>
+         </property>
+         <property name="autoScroll">
+          <bool>false</bool>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="headerHidden">
+          <bool>true</bool>
+         </property>
+         <column>
+          <property name="text">
+           <string notr="true">Items</string>
+          </property>
+         </column>
+         <item>
+          <property name="text">
+           <string>Начальные значения</string>
+          </property>
+          <property name="flags">
+           <set>ItemIsEnabled</set>
+          </property>
+          <item>
+           <property name="text">
+            <string>Проницаемость по X</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Проницаемость по Y</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Проницаемость по Z</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Пористость</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Песчанистость</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>TranX</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>TranY</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>TranZ</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Sw</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>So</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Sg</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>RS</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Давление нефти</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Давление воды</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Давление насыщения</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Глубина</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>PVTNUM</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>SATNUM</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>EQLNUM</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Объем пор</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Запас нефти</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>AQUIFER</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+         </item>
+         <item>
+          <property name="text">
+           <string>Рассчитанные значения</string>
+          </property>
+          <property name="flags">
+           <set>ItemIsEnabled</set>
+          </property>
+          <item>
+           <property name="text">
+            <string>Sw</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>So</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Sg</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Давление нефти</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Давление насыщения</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsEnabled</set>
+           </property>
+          </item>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="PaletteHorizontalLayout">
+         <item>
+          <widget class="QCheckBox" name="DisplayPaletteCheckBox">
+           <property name="text">
+            <string>Контур</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="PaletteHorizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="PaletteSettingsButton">
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="MeshHorizontalLayout">
+         <item>
+          <widget class="QCheckBox" name="DisplayMeshCheckBox">
+           <property name="text">
+            <string>Сетка</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSlider" name="MeshWidthSlider">
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>10</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::TicksBelow</enum>
+           </property>
+           <property name="tickInterval">
+            <number>1</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="PaletteValuesButton">
+         <property name="text">
+          <string>Палитра значений</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="GridSettingsButton">
+         <property name="text">
+          <string>Видимость блоков</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="WellsLabel">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Скважины</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="DisplayWellsCheckBox">
+         <property name="text">
+          <string>Показать скважины</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="DisplayWellInfoCheckBox">
+         <property name="text">
+          <string>Информация о скважинах</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="WellInfoSettingsComboBox">
+         <item>
+          <property name="text">
+           <string>По всей истории</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>До текущей даты</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="WellSettingsButton">
+         <property name="text">
+          <string>Внешний вид скважин</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="OtherLabel">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Другое</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="ScaleXLayout">
+         <item>
+          <widget class="QLabel" name="ScaleXLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Масштаб по X:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="ScaleXSpinBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="decimals">
+            <number>3</number>
+           </property>
+           <property name="minimum">
+            <double>-1000.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>1000.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.001000000000000</double>
+           </property>
+           <property name="value">
+            <double>1.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="ScaleYLayout">
+         <item>
+          <widget class="QLabel" name="ScaleYLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Масштаб по Y:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="ScaleYSpinBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="decimals">
+            <number>3</number>
+           </property>
+           <property name="minimum">
+            <double>-1000.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>1000.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.001000000000000</double>
+           </property>
+           <property name="value">
+            <double>1.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="ScaleZLayout">
+         <item>
+          <widget class="QLabel" name="ScaleZLabel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Масштаб по Z:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="ScaleZSpinBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="decimals">
+            <number>3</number>
+           </property>
+           <property name="minimum">
+            <double>-1000.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>1000.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.001000000000000</double>
+           </property>
+           <property name="value">
+            <double>1.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="AxesLayout">
+         <item>
+          <widget class="QCheckBox" name="DisplayAxesCheckBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Оси сцены:</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="AxesLengthSpinBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximum">
+            <double>1.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.010000000000000</double>
+           </property>
+           <property name="value">
+            <double>0.200000000000000</double>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="LegendHorizontalLayout">
+         <item>
+          <widget class="QCheckBox" name="DisplayLegendCheckBox">
+           <property name="text">
+            <string>Легенда</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="LegendHorizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="LegendSettingsButton">
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="DisplayBoxCheckBox">
+         <property name="text">
+          <string>Отображать блок</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="RotationHorizontalLayout">
+         <item>
+          <widget class="QComboBox" name="RotationComboBox"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="RotationLabel">
+           <property name="text">
+            <string>вращение</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="ViewAxisLayout">
+         <item>
+          <widget class="QPushButton" name="XYViewAxisButton">
+           <property name="text">
+            <string>XY</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="XZViewAxisButton">
+           <property name="text">
+            <string>XZ</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="YZViewAxisButton">
+           <property name="text">
+            <string>YZ</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

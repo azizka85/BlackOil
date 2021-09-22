@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PVTOForm</class>
+ <widget class="QWidget" name="PVTOForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::ActionsContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>PVT нефти</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QSplitter" name="Splitter">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="handleWidth">
+      <number>2</number>
+     </property>
+     <widget class="QTableView" name="Table">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+      <property name="sortingEnabled">
+       <bool>true</bool>
+      </property>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>100</number>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>150</number>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+  <action name="DisplayFigureAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../resources.qrc">
+     <normaloff>:/Images/icon-linechart-32x32.png</normaloff>:/Images/icon-linechart-32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Показать график</string>
+   </property>
+   <property name="toolTip">
+    <string>Показать график PVT нефти</string>
+   </property>
+  </action>
+  <action name="DisplayTableAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../resources.qrc">
+     <normaloff>:/Images/icon-tablegrid-32x32.png</normaloff>:/Images/icon-tablegrid-32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Показать таблицу</string>
+   </property>
+   <property name="toolTip">
+    <string>Показать таблицу PVT нефти</string>
+   </property>
+  </action>
+  <action name="SplitAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <selectedoff>:/Images/icon-horizontal-splitter-32x32.png</selectedoff>
+     <selectedon>:/Images/icon-vertical-splitter-32x32.png</selectedon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Разделить горизонтально</string>
+   </property>
+   <property name="toolTip">
+    <string>Разделить горизонтально или вертикально область</string>
+   </property>
+  </action>
+  <action name="DisplayFigureSettingsAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../../resources.qrc">
+     <normaloff>:/Images/icon-settings-32x32.png</normaloff>:/Images/icon-settings-32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Настройки графики</string>
+   </property>
+   <property name="toolTip">
+    <string>Настройки графики PVT нефти</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

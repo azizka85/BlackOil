@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1128</width>
+    <height>684</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>BlackOil</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resources.qrc">
+    <normaloff>:/Images/main-image-32x32.ico</normaloff>:/Images/main-image-32x32.ico</iconset>
+  </property>
+  <widget class="QWidget" name="CentralWidget"/>
+  <widget class="QStatusBar" name="StatusBar"/>
+  <widget class="QToolBar" name="MainToolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="LoadDataAction"/>
+   <addaction name="FieldActionsListAction"/>
+   <addaction name="WellsActionsListAction"/>
+   <addaction name="FPAction"/>
+   <addaction name="ConsoleAction"/>
+   <addaction name="WindowFullSizeAction"/>
+   <addaction name="UnsetAction"/>
+  </widget>
+  <widget class="QToolBar" name="DataToolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>true</bool>
+   </attribute>
+   <addaction name="LoadEclipseDataAction"/>
+  </widget>
+  <widget class="QToolBar" name="FieldToolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>true</bool>
+   </attribute>
+   <addaction name="FieldAction"/>
+   <addaction name="FieldSettingsAction"/>
+   <addaction name="separator"/>
+   <addaction name="DisplayWellsAction"/>
+   <addaction name="separator"/>
+   <addaction name="DisplayPaletteAction"/>
+   <addaction name="DisplayMeshAction"/>
+   <addaction name="DisplayBlockAction"/>
+   <addaction name="separator"/>
+   <addaction name="DisplayAxesAction"/>
+   <addaction name="separator"/>
+   <addaction name="DisplayLegendAction"/>
+   <addaction name="LegendSettingsAction"/>
+  </widget>
+  <widget class="QToolBar" name="WellsToolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>true</bool>
+   </attribute>
+   <addaction name="WellsScheduleAction"/>
+  </widget>
+  <widget class="QToolBar" name="FPToolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>true</bool>
+   </attribute>
+   <addaction name="SWOFAction"/>
+   <addaction name="SGOFAction"/>
+   <addaction name="separator"/>
+   <addaction name="PVTOAction"/>
+   <addaction name="PVTGAction"/>
+  </widget>
+  <action name="LoadDataAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/open-icon-32x32.png</normaloff>:/Images/open-icon-32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Загрузить данные</string>
+   </property>
+   <property name="toolTip">
+    <string>Загрузить данные</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="LoadEclipseDataAction">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/eclipse-icon-32x32.png</normaloff>:/Images/eclipse-icon-32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Загрузить данные в формате Eclipse</string>
+   </property>
+   <property name="toolTip">
+    <string>Загрузить данные в формате Eclipse</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+E</string>
+   </property>
+  </action>
+  <action name="FieldActionsListAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/icon-slicers-32x32.png</normaloff>:/Images/icon-slicers-32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Список действий для поля</string>
+   </property>
+   <property name="toolTip">
+    <string>Список действий для поля</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="FieldAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/icon-slicers-32x32.png</normaloff>:/Images/icon-slicers-32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Показать поле</string>
+   </property>
+   <property name="toolTip">
+    <string>Показать поле</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+F</string>
+   </property>
+  </action>
+  <action name="FieldSettingsAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/icon-slicers-32x32.png</normaloff>:/Images/icon-slicers-32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Свойства поля</string>
+   </property>
+   <property name="toolTip">
+    <string>Свойства поля</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+F</string>
+   </property>
+  </action>
+  <action name="DisplayWellsAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/icon-well-32x32.png</normaloff>:/Images/icon-well-32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Отображать скважины</string>
+   </property>
+   <property name="toolTip">
+    <string>Отображать скважины</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+W</string>
+   </property>
+  </action>
+  <action name="DisplayPaletteAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/icon-mesh-32x32.png</normaloff>:/Images/icon-mesh-32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Отображать палитру</string>
+   </property>
+   <property name="toolTip">
+    <string>Отображать палитру</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+P</string>
+   </property>
+  </action>
+  <action name="DisplayMeshAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/icon-mesh-32x32.png</normaloff>:/Images/icon-mesh-32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Отображать сетку</string>
+   </property>
+   <property name="toolTip">
+    <string>Отображать сетку</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+M</string>
+   </property>
+  </action>
+  <action name="DisplayBlockAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/icon-mesh-32x32.png</normaloff>:/Images/icon-mesh-32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Отображать блок</string>
+   </property>
+   <property name="toolTip">
+    <string>Отображать блок</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+B</string>
+   </property>
+  </action>
+  <action name="DisplayAxesAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/icon-axes-32x32.png</normaloff>:/Images/icon-axes-32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Отображать оси</string>
+   </property>
+   <property name="toolTip">
+    <string>Отображать оси</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+A</string>
+   </property>
+  </action>
+  <action name="DisplayLegendAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/icon-legend-32x32.png</normaloff>:/Images/icon-legend-32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Отображать легенду</string>
+   </property>
+   <property name="toolTip">
+    <string>Отображать легенду</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+L</string>
+   </property>
+  </action>
+  <action name="LegendSettingsAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/icon-legend-32x32.png</normaloff>:/Images/icon-legend-32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Свойства легенды</string>
+   </property>
+   <property name="toolTip">
+    <string>Свойства легенды</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+L</string>
+   </property>
+  </action>
+  <action name="WellsActionsListAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/icon-well-32x32.png</normaloff>:/Images/icon-well-32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Список действии для скважин</string>
+   </property>
+   <property name="toolTip">
+    <string>Список действии для скважин</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+W</string>
+   </property>
+  </action>
+  <action name="WellsScheduleAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/icon-schedule-32x32.png</normaloff>:/Images/icon-schedule-32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Расписание скважин</string>
+   </property>
+   <property name="toolTip">
+    <string>Расписание скважин</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+W</string>
+   </property>
+  </action>
+  <action name="FPAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/icon-linechart-32x32.png</normaloff>:/Images/icon-linechart-32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Свойства пластовой жидкости</string>
+   </property>
+   <property name="toolTip">
+    <string>Свойства пластовой жидкости</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="SWOFAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/icon-linechart-32x32.png</normaloff>:/Images/icon-linechart-32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>ОФП и КД (нефть-вода)</string>
+   </property>
+   <property name="toolTip">
+    <string>ОФП и КД (нефть-вода)</string>
+   </property>
+  </action>
+  <action name="SGOFAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/icon-linechart-32x32.png</normaloff>:/Images/icon-linechart-32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>ОФП и КД (газ-нефть)</string>
+   </property>
+   <property name="toolTip">
+    <string>ОФП и КД (газ-нефть)</string>
+   </property>
+  </action>
+  <action name="PVTOAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/icon-linechart-32x32.png</normaloff>:/Images/icon-linechart-32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>PVT нефти</string>
+   </property>
+   <property name="toolTip">
+    <string>PVT нефти</string>
+   </property>
+  </action>
+  <action name="PVTGAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/icon-linechart-32x32.png</normaloff>:/Images/icon-linechart-32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>PVT газа</string>
+   </property>
+   <property name="toolTip">
+    <string>PVT газа</string>
+   </property>
+  </action>
+  <action name="WindowFullSizeAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/icon-fitsize-32x32.png</normaloff>:/Images/icon-fitsize-32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Полноэкранный режим</string>
+   </property>
+   <property name="toolTip">
+    <string>Полноэкранный режим</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="ConsoleAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/icon-console-32x32.png</normaloff>:/Images/icon-console-32x32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Отображать консоль</string>
+   </property>
+   <property name="toolTip">
+    <string>Отображать консоль</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="UnsetAction">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/exit-32x32.ico</normaloff>:/Images/exit-32x32.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Сбросить данные</string>
+   </property>
+   <property name="toolTip">
+    <string>Сбросить данные</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+U</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
